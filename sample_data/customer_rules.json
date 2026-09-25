@@ -1,0 +1,9 @@
+[
+  {"name":"Customer ID required","type":"not_null","column":"customer_id"},
+  {"name":"Customer ID unique","type":"unique","column":"customer_id"},
+  {"name":"Email required","type":"not_null","column":"email"},
+  {"name":"Email format","type":"regex","column":"email","pattern":"[^@]+@[^@]+\\.[^@]+"},
+  {"name":"Age range","type":"range","column":"age","min":18,"max":120},
+  {"name":"Known status","type":"allowed_values","column":"status","values":["active","inactive"]},
+  {"name":"Minimum feed size","type":"row_count","min":5}
+]
