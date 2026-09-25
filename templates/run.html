@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}
+<section class="hero compact"><p class="eyebrow">Quality run #{{ run.id }}</p><h1>{{ run.dataset_name }}</h1><p class="lead">Rule set: {{ run.rule_set_name }}</p></section>
+<section class="grid three"><div class="metric-card"><strong>{{ run.score }}%</strong><span>Quality score</span></div><div class="metric-card"><strong>{{ run.passed }}</strong><span>Rules passed</span></div><div class="metric-card"><strong>{{ run.total_violations }}</strong><span>Violations</span></div></section>
+<section class="panel"><h2>Rule results</h2>{% for r in run.result.rules %}<div class="finding"><div><strong>{{ r.name }}</strong><p>{{ r.detail }}</p></div><span class="score {% if r.passed %}good{% else %}bad{% endif %}">{% if r.passed %}PASS{% else %}FAIL{% endif %}</span></div>{% endfor %}</section>
+{% endblock %}
