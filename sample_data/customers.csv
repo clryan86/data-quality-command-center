@@ -1,0 +1,7 @@
+customer_id,email,age,status,lifetime_value
+1001,aisha@example.com,31,active,1250.50
+1002,marco@example.com,44,active,980.00
+1003,broken-email,28,active,1100.25
+1004,,37,inactive,450.00
+1005,sam@example.com,190,active,750.00
+1005,sam.duplicate@example.com,42,unknown,150000.00
