@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      DATABASE_PATH: /app/data/quality.db
+      UPLOAD_DIR: /app/data/uploads
+    volumes:
+      - quality_data:/app/data
+volumes:
+  quality_data:
